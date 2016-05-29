@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/hard.css">
+    <link rel="stylesheet" href="styles/ranking.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="slashmobilityEjercicioApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <ul class="nav navbar-nav">
+              <li ng-class="{active: activetab == '/'}"><a href="#/">EASY</a></li>
+              <li ng-class="{active: activetab == '/hard'}"><a ng-href="#/hard">HARD</a></li>
+              <li ng-class="{active: activetab == '/ranking'}"><a ng-href="#/ranking">RANKING</a></li>
+            </ul>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+    <div ng-view=""></div>
+    </div>
+   
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+        <!--project files-->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/easy.js"></script>
+        <script src="scripts/controllers/hard.js"></script>
+        <script src="scripts/controllers/ranking.js"></script>
+
+        <!--services-->
+        <script src="scripts/services/calculate.js"></script>
+        <script src="scripts/services/ranking.js"></script>
+
+        <!--directive-->
+        <script src="scripts/directives/board.js"></script>
+        <script src="scripts/directives/modal.js"></script>
+
+        <!--filters-->
+        <script src="scripts/filters/filters.js"></script>
+        
+        <!-- endbuild -->
+</body>
+</html>
